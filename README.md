@@ -1,1 +1,1 @@
-# Koonang
+Supabase Edge Function URL Ai Analysis: https://uhqzjxjvudobrinobmwl.supabase.co/functions/v1/ai-analysis

@@ -1,0 +1,601 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --koonang-bg: #070d1a;
+    --koonang-surface: #0d1830;
+    --koonang-card: #111f38;
+    --koonang-border: rgba(32, 200, 160, 0.18);
+    --koonang-teal: #20c8a0;
+    --koonang-teal-mid: #0e9e7c;
+    --koonang-green: #4de882;
+    --koonang-text: #e8f4f0;
+    --koonang-muted: #8aa8b8;
+    --koonang-gold: #f5c842;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .wrap {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--koonang-bg);
+    color: var(--koonang-text);
+    padding: 48px 24px 64px;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .wrap::before {
+    content: '';
+    position: absolute;
+    top: -120px; left: 50%;
+    transform: translateX(-50%);
+    width: 700px; height: 400px;
+    background: radial-gradient(ellipse at center, rgba(32,200,160,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 52px;
+    position: relative;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--koonang-teal);
+    border: 1px solid rgba(32,200,160,0.35);
+    border-radius: 20px;
+    padding: 5px 16px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 5vw, 46px);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 14px;
+  }
+
+  .hero h1 span {
+    background: linear-gradient(90deg, var(--koonang-teal), var(--koonang-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero p {
+    font-size: 15px;
+    color: var(--koonang-muted);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ─── Toggle ─── */
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 44px;
+  }
+
+  .toggle-label {
+    font-size: 13px;
+    color: var(--koonang-muted);
+  }
+
+  .toggle-label.active { color: var(--koonang-text); font-weight: 500; }
+
+  .toggle {
+    width: 48px; height: 26px;
+    background: var(--koonang-teal-mid);
+    border-radius: 13px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+  }
+
+  .toggle::after {
+    content: '';
+    position: absolute;
+    top: 3px; left: 3px;
+    width: 20px; height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transition: left 0.25s;
+  }
+
+  .toggle.annual::after { left: 25px; }
+
+  .save-chip {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--koonang-bg);
+    background: var(--koonang-green);
+    border-radius: 10px;
+    padding: 2px 9px;
+  }
+
+  /* ─── Section label ─── */
+  .section-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--koonang-teal);
+    margin-bottom: 18px;
+  }
+
+  /* ─── Plan cards ─── */
+  .plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .plan-card {
+    background: var(--koonang-card);
+    border: 1px solid var(--koonang-border);
+    border-radius: 18px;
+    padding: 28px 24px;
+    position: relative;
+    transition: border-color 0.25s, transform 0.25s;
+    cursor: pointer;
+  }
+
+  .plan-card:hover {
+    border-color: rgba(32,200,160,0.45);
+    transform: translateY(-3px);
+  }
+
+  .plan-card.featured {
+    border-color: var(--koonang-teal);
+    border-width: 1.5px;
+    background: linear-gradient(145deg, #0f2240 0%, #122e28 100%);
+  }
+
+  .best-badge {
+    position: absolute;
+    top: -12px; left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, var(--koonang-teal), var(--koonang-green));
+    color: #070d1a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+
+  .plan-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .plan-tagline {
+    font-size: 12px;
+    color: var(--koonang-muted);
+    margin-bottom: 20px;
+  }
+
+  .plan-price {
+    margin-bottom: 24px;
+  }
+
+  .plan-price .amount {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--koonang-teal);
+  }
+
+  .plan-price .period {
+    font-size: 13px;
+    color: var(--koonang-muted);
+    margin-left: 4px;
+  }
+
+  .plan-divider {
+    height: 1px;
+    background: var(--koonang-border);
+    margin-bottom: 20px;
+  }
+
+  .feature-list {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+
+  .feature-list li {
+    font-size: 13px;
+    color: var(--koonang-text);
+    padding: 5px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .feature-list li .icon {
+    flex-shrink: 0;
+    width: 16px; height: 16px;
+    margin-top: 1px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  .icon-yes { background: rgba(32,200,160,0.18); color: var(--koonang-teal); }
+  .icon-no { background: rgba(255,255,255,0.07); color: var(--koonang-muted); }
+
+  .plan-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+
+  .plan-btn:active { transform: scale(0.98); }
+
+  .btn-outline {
+    background: transparent;
+    border: 1px solid rgba(32,200,160,0.4);
+    color: var(--koonang-teal);
+  }
+
+  .btn-outline:hover { background: rgba(32,200,160,0.08); }
+
+  .btn-filled {
+    background: linear-gradient(135deg, var(--koonang-teal), #16b080);
+    color: #070d1a;
+    font-weight: 600;
+  }
+
+  .btn-filled:hover { opacity: 0.9; }
+
+  /* ─── Subscription tiers ─── */
+  .sub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-bottom: 48px;
+  }
+
+  .sub-card {
+    background: var(--koonang-card);
+    border: 1px solid var(--koonang-border);
+    border-radius: 16px;
+    padding: 22px 20px;
+    transition: border-color 0.25s, transform 0.2s;
+    cursor: pointer;
+  }
+
+  .sub-card:hover {
+    border-color: rgba(32,200,160,0.4);
+    transform: translateY(-2px);
+  }
+
+  .sub-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .sub-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .sub-duration {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  .dur-3 { background: rgba(32,200,160,0.15); color: var(--koonang-teal); }
+  .dur-6 { background: rgba(77,232,130,0.15); color: var(--koonang-green); }
+  .dur-12 { background: rgba(245,200,66,0.15); color: var(--koonang-gold); }
+
+  .sub-desc {
+    font-size: 13px;
+    color: var(--koonang-muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .sub-perk {
+    font-size: 12px;
+    color: var(--koonang-teal);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .sub-perk::before {
+    content: '';
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: var(--koonang-teal);
+    border-radius: 50%;
+  }
+
+  .dur-12 ~ .sub-perk, .sub-card.golden .sub-perk { color: var(--koonang-gold); }
+  .sub-card.golden .sub-perk::before { background: var(--koonang-gold); }
+  .sub-card.golden { border-color: rgba(245,200,66,0.25); }
+
+  /* ─── CTA footer ─── */
+  .cta-box {
+    background: linear-gradient(135deg, #0c1e38 0%, #0a2620 100%);
+    border: 1px solid rgba(32,200,160,0.25);
+    border-radius: 20px;
+    padding: 36px 28px;
+    text-align: center;
+  }
+
+  .cta-box h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .cta-box p {
+    font-size: 14px;
+    color: var(--koonang-muted);
+    margin-bottom: 24px;
+  }
+
+  .cta-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-primary {
+    padding: 13px 28px;
+    background: linear-gradient(135deg, var(--koonang-teal), #16b080);
+    color: #070d1a;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .cta-primary:hover { opacity: 0.88; }
+
+  .cta-secondary {
+    padding: 13px 28px;
+    background: transparent;
+    color: var(--koonang-text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+
+  .cta-secondary:hover { border-color: rgba(255,255,255,0.35); }
+
+  .trust-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    font-size: 12px;
+    color: var(--koonang-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .trust-dot {
+    width: 6px; height: 6px;
+    background: var(--koonang-teal);
+    border-radius: 50%;
+  }
+</style>
+
+<div class="wrap">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-badge">Koonang.io · Investasi Digital</div>
+    <h1>Pilih Paket<br><span>Pertumbuhan Digital</span> Anda</h1>
+    <p>Solusi website profesional berbasis AI — mulai dari fondasi hingga ekosistem digital penuh. Upgrade kapan saja, sesuai kebutuhan bisnis Anda.</p>
+  </div>
+
+  <!-- Toggle -->
+  <div class="toggle-row">
+    <span class="toggle-label active" id="lbl-monthly">Bulanan</span>
+    <button class="toggle" id="toggle-btn" onclick="toggleBilling()"></button>
+    <span class="toggle-label" id="lbl-annual">Tahunan</span>
+    <span class="save-chip" id="save-chip" style="opacity:0">Hemat 15%</span>
+  </div>
+
+  <!-- Plans -->
+  <div class="section-label" style="text-align:center">— Paket Layanan —</div>
+  <div class="plans-grid">
+
+    <!-- Foundation -->
+    <div class="plan-card">
+      <div class="plan-name">Foundation</div>
+      <div class="plan-tagline">Fondasi digital yang kokoh</div>
+      <div class="plan-price">
+        <span class="amount" id="price-foundation">IDR 620K</span>
+        <span class="period">/bulan</span>
+      </div>
+      <div class="plan-divider"></div>
+      <ul class="feature-list">
+        <li><span class="icon icon-yes">✓</span>5 Halaman Web</li>
+        <li><span class="icon icon-yes">✓</span>Free Domain</li>
+        <li><span class="icon icon-yes">✓</span>Hosting Entry 1GB</li>
+        <li><span class="icon icon-yes">✓</span>5 Akun Email</li>
+        <li><span class="icon icon-yes">✓</span>SSL Gratis</li>
+        <li><span class="icon icon-yes">✓</span>SEO Basic 5 Halaman</li>
+        <li><span class="icon icon-no">—</span>Reporting & Maintenance</li>
+        <li><span class="icon icon-no">—</span>API Access</li>
+      </ul>
+      <button class="plan-btn btn-outline" onclick="sendPrompt('Saya tertarik dengan paket Foundation Koonang.io')">Mulai Sekarang ↗</button>
+    </div>
+
+    <!-- Elevation -->
+    <div class="plan-card">
+      <div class="plan-name">Elevation</div>
+      <div class="plan-tagline">Tingkatkan performa brand Anda</div>
+      <div class="plan-price">
+        <span class="amount" id="price-elevation">IDR 808K</span>
+        <span class="period">/bulan</span>
+      </div>
+      <div class="plan-divider"></div>
+      <ul class="feature-list">
+        <li><span class="icon icon-yes">✓</span>10 Halaman Web</li>
+        <li><span class="icon icon-yes">✓</span>Free Domain + 2 Bahasa</li>
+        <li><span class="icon icon-yes">✓</span>Hosting Unlimited Small</li>
+        <li><span class="icon icon-yes">✓</span>10 Akun Email</li>
+        <li><span class="icon icon-yes">✓</span>SSL Gratis</li>
+        <li><span class="icon icon-yes">✓</span>Full SEO 10 Halaman</li>
+        <li><span class="icon icon-yes">✓</span>Reporting & Maintenance</li>
+        <li><span class="icon icon-yes">✓</span>API Access</li>
+      </ul>
+      <button class="plan-btn btn-outline" onclick="sendPrompt('Saya tertarik dengan paket Elevation Koonang.io')">Mulai Sekarang ↗</button>
+    </div>
+
+    <!-- Enterprise -->
+    <div class="plan-card featured">
+      <div class="best-badge">⭐ Best Seller</div>
+      <div class="plan-name">Enterprise</div>
+      <div class="plan-tagline">Ekosistem digital yang lengkap</div>
+      <div class="plan-price">
+        <span class="amount" id="price-enterprise">IDR 1.009K</span>
+        <span class="period">/bulan</span>
+      </div>
+      <div class="plan-divider"></div>
+      <ul class="feature-list">
+        <li><span class="icon icon-yes">✓</span>20 Halaman Web</li>
+        <li><span class="icon icon-yes">✓</span>Free Domain + 5 Bahasa</li>
+        <li><span class="icon icon-yes">✓</span>Hosting Unlimited Medium</li>
+        <li><span class="icon icon-yes">✓</span>Unlimited Email</li>
+        <li><span class="icon icon-yes">✓</span>SSL Gratis</li>
+        <li><span class="icon icon-yes">✓</span>Full SEO 20 Halaman</li>
+        <li><span class="icon icon-yes">✓</span>Reporting & Maintenance</li>
+        <li><span class="icon icon-yes">✓</span>API + CRM + Payment Gateway</li>
+        <li><span class="icon icon-yes">✓</span>Security</li>
+      </ul>
+      <button class="plan-btn btn-filled" onclick="sendPrompt('Saya tertarik dengan paket Enterprise Koonang.io')">Dapatkan Sekarang ↗</button>
+    </div>
+
+  </div>
+
+  <!-- Subscription Tiers -->
+  <div class="section-label" style="text-align:center">— Pilih Durasi Berlangganan —</div>
+  <div class="sub-grid">
+
+    <div class="sub-card">
+      <div class="sub-header">
+        <div class="sub-name">Prime Access</div>
+        <span class="sub-duration dur-3">3 Bulan</span>
+      </div>
+      <div class="sub-desc">Ideal untuk bisnis yang ingin mulai dengan fondasi digital terstruktur, tanpa komitmen jangka panjang.</div>
+      <div class="sub-perk">Fleksibel & bebas risiko</div>
+    </div>
+
+    <div class="sub-card">
+      <div class="sub-header">
+        <div class="sub-name">Prime Advantage</div>
+        <span class="sub-duration dur-6">6 Bulan</span>
+      </div>
+      <div class="sub-desc">Lebih dari sekadar website aktif — dapatkan dukungan operasional konsisten dan penguatan brand presence Anda.</div>
+      <div class="sub-perk">Performa & konsistensi optimal</div>
+    </div>
+
+    <div class="sub-card golden">
+      <div class="sub-header">
+        <div class="sub-name">Prime Legacy</div>
+        <span class="sub-duration dur-12">12 Bulan</span>
+      </div>
+      <div class="sub-desc">Komitmen satu tahun untuk bisnis yang serius membangun kehadiran digital yang kuat dan berkelanjutan.</div>
+      <div class="sub-perk" style="color:var(--koonang-gold)">Hemat maksimal · Prioritas support</div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h3>Tidak yakin harus mulai dari mana?</h3>
+    <p>Tim Koonang siap membantu Anda menemukan paket yang paling sesuai dengan kebutuhan dan anggaran bisnis Anda.</p>
+    <div class="cta-row">
+      <button class="cta-primary" onclick="sendPrompt('Saya butuh rekomendasi paket Koonang.io yang sesuai bisnis saya')">Konsultasi Gratis ↗</button>
+      <button class="cta-secondary" onclick="sendPrompt('Bandingkan semua paket Koonang.io untuk saya')">Bandingkan Paket</button>
+    </div>
+    <div class="trust-row">
+      <span class="trust-item"><span class="trust-dot"></span>Setup Cepat</span>
+      <span class="trust-item"><span class="trust-dot"></span>Tanpa Biaya Tersembunyi</span>
+      <span class="trust-item"><span class="trust-dot"></span>Support Bahasa Indonesia</span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  let isAnnual = false;
+  const prices = {
+    foundation: [620, 527],
+    elevation: [808, 686],
+    enterprise: [1009, 857]
+  };
+
+  function toggleBilling() {
+    isAnnual = !isAnnual;
+    const btn = document.getElementById('toggle-btn');
+    btn.classList.toggle('annual', isAnnual);
+    document.getElementById('lbl-monthly').classList.toggle('active', !isAnnual);
+    document.getElementById('lbl-annual').classList.toggle('active', isAnnual);
+    document.getElementById('save-chip').style.opacity = isAnnual ? '1' : '0';
+
+    const idx = isAnnual ? 1 : 0;
+    document.getElementById('price-foundation').textContent = 'IDR ' + prices.foundation[idx] + 'K';
+    document.getElementById('price-elevation').textContent = 'IDR ' + prices.elevation[idx] + 'K';
+    document.getElementById('price-enterprise').textContent = 'IDR ' + prices.enterprise[idx] + 'K';
+  }
+</script>
