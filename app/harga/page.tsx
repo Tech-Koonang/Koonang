@@ -11,9 +11,8 @@ export default function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(false);
 
   const prices = {
-    foundation: { setup: 25000, monthly: 2500, annual: 2125 },
-    elevation: { setup: 60000, monthly: 5000, annual: 4250 },
-    enterprise: { setup: 150000, monthly: 10000, annual: 8500 },
+    foundation: { setup: 60000, monthly: 5000, annual: 4250 },
+    elevation: { setup: 150000, monthly: 10000, annual: 8500 },
   };
   const formatPrice = (price: number) => price.toLocaleString("id-ID");
 
@@ -23,23 +22,6 @@ export default function PricingPage() {
       name: language === "id" ? "Foundation" : "Foundation",
       tagline: language === "id" ? "Fondasi digital yang kokoh" : "Solid digital foundation",
       price: prices.foundation,
-      features: [
-        { included: true, text: language === "id" ? "5 Halaman Web" : "5 Web Pages" },
-        { included: true, text: language === "id" ? "Free Domain" : "Free Domain" },
-        { included: true, text: language === "id" ? "Hosting Entry 1GB" : "Entry Hosting 1GB" },
-        { included: true, text: language === "id" ? "5 Akun Email" : "5 Email Accounts" },
-        { included: true, text: language === "id" ? "SSL Gratis" : "Free SSL" },
-        { included: true, text: language === "id" ? "SEO Basic 5 Halaman" : "Basic SEO 5 Pages" },
-        { included: false, text: language === "id" ? "Reporting & Maintenance" : "Reporting & Maintenance" },
-        { included: false, text: language === "id" ? "API Access" : "API Access" },
-      ],
-      featured: false,
-    },
-    {
-      id: "elevation",
-      name: language === "id" ? "Elevation" : "Elevation",
-      tagline: language === "id" ? "Tingkatkan performa brand Anda" : "Elevate your brand performance",
-      price: prices.elevation,
       features: [
         { included: true, text: language === "id" ? "10 Halaman Web" : "10 Web Pages" },
         { included: true, text: language === "id" ? "Free Domain + 2 Bahasa" : "Free Domain + 2 Languages" },
@@ -51,12 +33,13 @@ export default function PricingPage() {
         { included: true, text: language === "id" ? "API Access" : "API Access" },
       ],
       featured: false,
+      ctaLabel: language === "id" ? "Mulai Sekarang" : "Get Started",
     },
     {
-      id: "enterprise",
-      name: language === "id" ? "Enterprise" : "Enterprise",
-      tagline: language === "id" ? "Ekosistem digital yang lengkap" : "Complete digital ecosystem",
-      price: prices.enterprise,
+      id: "elevation",
+      name: language === "id" ? "Elevation" : "Elevation",
+      tagline: language === "id" ? "Tingkatkan performa brand Anda" : "Elevate your brand performance",
+      price: prices.elevation,
       features: [
         { included: true, text: language === "id" ? "20 Halaman Web" : "20 Web Pages" },
         { included: true, text: language === "id" ? "Free Domain + 5 Bahasa" : "Free Domain + 5 Languages" },
@@ -69,6 +52,22 @@ export default function PricingPage() {
         { included: true, text: language === "id" ? "Security" : "Security" },
       ],
       featured: true,
+      ctaLabel: language === "id" ? "Mulai Sekarang" : "Get Started",
+    },
+    {
+      id: "enterprise",
+      name: language === "id" ? "Enterprise" : "Enterprise",
+      tagline: language === "id" ? "Solusi khusus untuk kebutuhan skala besar" : "Custom solution for large-scale needs",
+      price: null,
+      features: [
+        { included: true, text: language === "id" ? "Scope dan fitur disesuaikan" : "Custom scope and features" },
+        { included: true, text: language === "id" ? "Arsitektur sistem enterprise" : "Enterprise system architecture" },
+        { included: true, text: language === "id" ? "Integrasi khusus bisnis" : "Custom business integrations" },
+        { included: true, text: language === "id" ? "Security & compliance review" : "Security & compliance review" },
+        { included: true, text: language === "id" ? "Prioritas support" : "Priority support" },
+      ],
+      featured: false,
+      ctaLabel: language === "id" ? "Contact Sales" : "Contact Sales",
     },
   ];
 
@@ -125,7 +124,7 @@ export default function PricingPage() {
               className="inline-flex items-center px-4 py-2 rounded-full border border-teal-500/30 bg-teal-500/10 mb-8"
             >
               <span className="text-xs font-medium text-teal-400 tracking-wider uppercase">
-                Koonang.io · {language === "id" ? "Investasi Digital" : "Digital Investment"}
+                Koonang · {language === "id" ? "Investasi Digital" : "Digital Investment"}
               </span>
             </motion.div>
             
@@ -282,15 +281,28 @@ export default function PricingPage() {
                     transition={{ duration: 0.6, delay: 2.2 + index * 0.15 }}
                     className="mb-6"
                   >
-                    <span className="text-3xl font-bold text-teal-400">
-                      IDR {formatPrice(isAnnual ? plan.price.annual : plan.price.monthly)}K
-                    </span>
-                    <span className="text-sm text-slate-400 ml-2">
-                      /{language === "id" ? "bulan" : "month"}
-                    </span>
-                    <p className="mt-2 text-xs text-slate-400">
-                      {language === "id" ? "Setup Fee" : "Setup Fee"}: IDR {formatPrice(plan.price.setup)}K
-                    </p>
+                    {plan.price ? (
+                      <>
+                        <span className="text-3xl font-bold text-teal-400">
+                          IDR {formatPrice(isAnnual ? plan.price.annual : plan.price.monthly)}K
+                        </span>
+                        <span className="text-sm text-slate-400 ml-2">
+                          /{language === "id" ? "bulan" : "month"}
+                        </span>
+                        <p className="mt-2 text-xs text-slate-400">
+                          {language === "id" ? "Setup Fee" : "Setup Fee"}: IDR {formatPrice(plan.price.setup)}K
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <span className="text-3xl font-bold text-teal-400">
+                          Ask Our Team
+                        </span>
+                        <p className="mt-2 text-xs text-slate-400">
+                          {language === "id" ? "Diskusikan kebutuhan enterprise Anda" : "Discuss your enterprise needs"}
+                        </p>
+                      </>
+                    )}
                   </motion.div>
                   
                   <div className="h-px bg-slate-700 mb-6" />
@@ -342,7 +354,7 @@ export default function PricingPage() {
                         : 'border border-teal-500/50 text-teal-400 hover:bg-teal-500/10'
                     }`}
                   >
-                    {language === "id" ? "Mulai Sekarang" : "Get Started"} ↗
+                    {plan.ctaLabel} ↗
                   </motion.button>
                 </motion.div>
               ))}
