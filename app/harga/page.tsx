@@ -11,10 +11,11 @@ export default function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(false);
 
   const prices = {
-    foundation: { monthly: 620, annual: 527 },
-    elevation: { monthly: 808, annual: 686 },
-    enterprise: { monthly: 1009, annual: 857 },
+    foundation: { setup: 25000, monthly: 2500, annual: 2125 },
+    elevation: { setup: 60000, monthly: 5000, annual: 4250 },
+    enterprise: { setup: 150000, monthly: 10000, annual: 8500 },
   };
+  const formatPrice = (price: number) => price.toLocaleString("id-ID");
 
   const plans = [
     {
@@ -282,11 +283,14 @@ export default function PricingPage() {
                     className="mb-6"
                   >
                     <span className="text-3xl font-bold text-teal-400">
-                      IDR {isAnnual ? plan.price.annual : plan.price.monthly}K
+                      IDR {formatPrice(isAnnual ? plan.price.annual : plan.price.monthly)}K
                     </span>
                     <span className="text-sm text-slate-400 ml-2">
                       /{language === "id" ? "bulan" : "month"}
                     </span>
+                    <p className="mt-2 text-xs text-slate-400">
+                      {language === "id" ? "Setup Fee" : "Setup Fee"}: IDR {formatPrice(plan.price.setup)}K
+                    </p>
                   </motion.div>
                   
                   <div className="h-px bg-slate-700 mb-6" />
