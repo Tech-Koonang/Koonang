@@ -27,7 +27,7 @@ export function Footer() {
           <Link href="/" className="flex items-center gap-2 mb-6 group">
             <img src="/koonang-icon.png" alt="Koonang Logo" className="w-6 h-6 opacity-80 group-hover:scale-110 transition-transform" />
             <span className="text-lg font-medium tracking-tight text-white">
-              koonang.io
+              Koonang
             </span>
           </Link>
           <p className="text-slate-400 text-sm max-w-md leading-relaxed mb-6">

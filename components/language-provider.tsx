@@ -593,7 +593,7 @@ const translations: Record<Language, Translations> = {
         part2: "Bekerja untuk Bisnis Anda.",
       },
       subheadline: {
-        part1: "koonang.io adalah AI-powered Web Architecture Studio yang merancang sistem digital untuk",
+        part1: "Koonang adalah AI-powered Web Architecture Studio yang merancang sistem digital untuk",
         revenue: "revenue",
         automation: "automation",
         scalability: "scalability",
@@ -648,26 +648,26 @@ const translations: Record<Language, Translations> = {
         {
           title: "1. Penerimaan Syarat",
           content: [
-            "Dengan mengakses dan menggunakan situs web koonang.io, Anda menyetujui untuk terikat oleh Syarat Layanan ini dan semua hukum dan peraturan yang berlaku."
+            "Dengan mengakses dan menggunakan situs web Koonang, Anda menyetujui untuk terikat oleh Syarat Layanan ini dan semua hukum dan peraturan yang berlaku."
           ]
         },
         {
           title: "2. Layanan Arsitektur Digital",
           content: [
-            "koonang.io menyediakan layanan konsultasi, perancangan, dan pengembangan sistem digital. Setiap proyek didasarkan pada blueprint arsitektur yang disepakati bersama.",
+            "Koonang menyediakan layanan konsultasi, perancangan, dan pengembangan sistem digital. Setiap proyek didasarkan pada blueprint arsitektur yang disepakati bersama.",
             "Estimasi investasi, jadwal, dan ruang lingkup pekerjaan akan dirinci secara spesifik untuk setiap proyek sebelum pekerjaan dimulai."
           ]
         },
         {
           title: "3. Hak Kekayaan Intelektual",
           content: [
-            "Blueprint, konsep arsitektur, dan kode yang dikembangkan oleh koonang.io merupakan milik koonang.io sampai seluruh kewajiban pembayaran diselesaikan, kecuali disepakati lain secara tertulis."
+            "Blueprint, konsep arsitektur, dan kode yang dikembangkan oleh Koonang merupakan milik Koonang sampai seluruh kewajiban pembayaran diselesaikan, kecuali disepakati lain secara tertulis."
           ]
         },
         {
           title: "4. Batasan Tanggung Jawab",
           content: [
-            "koonang.io tidak bertanggung jawab atas kerugian langsung, tidak langsung, insidental, atau konsekuensial yang timbul dari penggunaan atau ketidakmampuan untuk menggunakan sistem atau layanan kami."
+            "Koonang tidak bertanggung jawab atas kerugian langsung, tidak langsung, insidental, atau konsekuensial yang timbul dari penggunaan atau ketidakmampuan untuk menggunakan sistem atau layanan kami."
           ]
         },
         {
@@ -859,7 +859,7 @@ const translations: Record<Language, Translations> = {
         title: "Perusahaan",
         links: ["Tentang", "Karir", "Kontak"],
       },
-      rights: "© 2026 koonang.io. Hak cipta dilindungi undang-undang.",
+      rights: "© 2026 Koonang. Hak cipta dilindungi undang-undang.",
       privacy: "Kebijakan Privasi",
       terms: "Syarat Layanan",
     },
@@ -1522,7 +1522,7 @@ const translations: Record<Language, Translations> = {
         part2: "Works for Your Business.",
       },
       subheadline: {
-        part1: "koonang.io is an AI-powered Web Architecture Studio designing digital systems for",
+        part1: "Koonang is an AI-powered Web Architecture Studio designing digital systems for",
         revenue: "revenue",
         automation: "automation",
         scalability: "scalability",
@@ -1645,7 +1645,7 @@ const translations: Record<Language, Translations> = {
         title: "Company",
         links: ["About", "Careers", "Contact"],
       },
-      rights: "© 2026 koonang.io. All rights reserved.",
+      rights: "© 2026 Koonang. All rights reserved.",
       privacy: "Privacy Policy",
       terms: "Terms of Service",
     },
@@ -2334,26 +2334,26 @@ const translations: Record<Language, Translations> = {
         {
           title: "1. Acceptance of Terms",
           content: [
-            "By accessing and using the koonang.io website, you agree to be bound by these Terms of Service and all applicable laws and regulations."
+            "By accessing and using the Koonang website, you agree to be bound by these Terms of Service and all applicable laws and regulations."
           ]
         },
         {
           title: "2. Digital Architecture Services",
           content: [
-            "koonang.io provides digital system consulting, design, and development services. Every project is based on a mutually agreed architecture blueprint.",
+            "Koonang provides digital system consulting, design, and development services. Every project is based on a mutually agreed architecture blueprint.",
             "Investment estimates, timelines, and scope of work will be detailed specifically for each project before work begins."
           ]
         },
         {
           title: "3. Intellectual Property Rights",
           content: [
-            "Blueprints, architectural concepts, and code developed by koonang.io remain the property of koonang.io until all payment obligations are settled, unless otherwise agreed in writing."
+            "Blueprints, architectural concepts, and code developed by Koonang remain the property of Koonang until all payment obligations are settled, unless otherwise agreed in writing."
           ]
         },
         {
           title: "4. Limitation of Liability",
           content: [
-            "koonang.io shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use our systems or services."
+            "Koonang shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use our systems or services."
           ]
         },
         {
