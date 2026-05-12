@@ -11,8 +11,8 @@ export default function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(false);
 
   const prices = {
-    foundation: { setup: 60000, monthly: 5000, annual: 4250 },
-    elevation: { setup: 150000, monthly: 10000, annual: 8500 },
+    foundation: { setup: 25000, monthly: 2500, annual: 2125 },
+    elevation: { setup: 60000, monthly: 5000, annual: 4250 },
   };
   const formatPrice = (price: number) => price.toLocaleString("id-ID");
 
