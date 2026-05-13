@@ -10,9 +10,10 @@ export default function PricingPage() {
   const { t, language } = useLanguage();
   const [isAnnual, setIsAnnual] = useState(false);
   const inquiryEmail = "hello@koonang.id";
-  const inquiryHref = `mailto:${inquiryEmail}?subject=${encodeURIComponent("Request Demo Koonang")}&body=${encodeURIComponent(
-    "Halo tim Koonang,\n\nSaya ingin request demo dan berdiskusi tentang kebutuhan sistem digital bisnis saya.\n\nNama:\nPerusahaan:\nNomor WhatsApp:\nKebutuhan singkat:\n\nTerima kasih."
-  )}`;
+  const inquirySubject = "Request Demo Koonang";
+  const inquiryBody =
+    "Halo tim Koonang,\n\nSaya ingin request demo dan berdiskusi tentang kebutuhan sistem digital bisnis saya.\n\nNama:\nPerusahaan:\nNomor WhatsApp:\nKebutuhan singkat:\n\nTerima kasih.";
+  const inquiryHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(inquiryEmail)}&su=${encodeURIComponent(inquirySubject)}&body=${encodeURIComponent(inquiryBody)}`;
 
   const prices = {
     foundation: { setup: 25000, monthly: 2500, annual: 2125 },
@@ -495,6 +496,8 @@ export default function PricingPage() {
             >
               <motion.a 
                 href={inquiryHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-teal-500 to-green-500 text-navy-900 font-semibold rounded-xl hover:shadow-lg hover:shadow-teal-500/25 transition-all"
