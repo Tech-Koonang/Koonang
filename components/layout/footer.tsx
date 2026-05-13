@@ -6,6 +6,7 @@ import { Mail, Phone, Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {
   const { t } = useLanguage();
+  const contactEmail = "koonang26@gmail.com";
 
   const platformLinks = [
     { name: t.footer.platform.links[0], path: "/arsitektur" },
@@ -27,7 +28,7 @@ export function Footer() {
           <Link href="/" className="flex items-center gap-2 mb-6 group">
             <img src="/koonang-icon.png" alt="Koonang Logo" className="w-6 h-6 opacity-80 group-hover:scale-110 transition-transform" />
             <span className="text-lg font-medium tracking-tight text-white">
-              koonang.io
+              Koonang
             </span>
           </Link>
           <p className="text-slate-400 text-sm max-w-md leading-relaxed mb-6">
@@ -38,9 +39,9 @@ export function Footer() {
               <Phone size={16} className="text-tosca" />
               {t.footer.contact.phone}
             </a>
-            <a href={`mailto:${t.footer.contact.email}`} className="flex items-center gap-2 hover:text-white transition-colors">
+            <a href={`mailto:${contactEmail}`} className="flex items-center gap-2 hover:text-white transition-colors">
               <Mail size={16} className="text-tosca" />
-              {t.footer.contact.email}
+              {contactEmail}
             </a>
             <div className="flex gap-4 mt-2">
               <a href={t.footer.contact.instagram} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-all">
