@@ -5,15 +5,12 @@ import { useLanguage } from "@/components/language-provider";
 import { ParticleBackground } from "@/components/layout/particle-background";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, X, ChevronDown } from "lucide-react";
+import { WizardModal } from "@/components/wizard/wizard-modal";
 
 export default function PricingPage() {
   const { t, language } = useLanguage();
   const [isAnnual, setIsAnnual] = useState(false);
-  const inquiryEmail = "hello@koonang.id";
-  const inquirySubject = "Request Demo Koonang";
-  const inquiryBody =
-    "Halo tim Koonang,\n\nSaya ingin request demo dan berdiskusi tentang kebutuhan sistem digital bisnis saya.\n\nNama:\nPerusahaan:\nNomor WhatsApp:\nKebutuhan singkat:\n\nTerima kasih.";
-  const inquiryHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(inquiryEmail)}&su=${encodeURIComponent(inquirySubject)}&body=${encodeURIComponent(inquiryBody)}`;
+  const [isWizardOpen, setIsWizardOpen] = useState(false);
 
   const prices = {
     foundation: { setup: 25000, monthly: 2500, annual: 2125 },
@@ -107,6 +104,7 @@ export default function PricingPage() {
   ];
 
   return (
+    <>
     <div className="min-h-screen bg-navy-900 text-white relative">
       <ParticleBackground isRelative className="opacity-40" />
       <div className="relative overflow-hidden">
@@ -494,16 +492,15 @@ export default function PricingPage() {
               transition={{ duration: 0.6, delay: 5.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
             >
-              <motion.a 
-                href={inquiryHref}
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button
+                type="button"
+                onClick={() => setIsWizardOpen(true)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-teal-500 to-green-500 text-navy-900 font-semibold rounded-xl hover:shadow-lg hover:shadow-teal-500/25 transition-all"
               >
                 Request Demo ↗
-              </motion.a>
+              </motion.button>
             </motion.div>
             
             <motion.div 
@@ -559,5 +556,10 @@ export default function PricingPage() {
         </div>
       </div>
     </div>
+    <WizardModal 
+      isOpen={isWizardOpen} 
+      onClose={() => setIsWizardOpen(false)} 
+    />
+    </>
   );
 }
