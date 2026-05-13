@@ -847,7 +847,7 @@ const translations: Record<Language, Translations> = {
       desc: "AI-powered Web Architecture Studio yang merancang sistem digital untuk revenue, automation, dan scalability.",
       contact: {
         phone: "+62 821-2378-2230",
-        email: "hello@koonang.io",
+        email: "koonang26@gmail.com",
         instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
         linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
       },
@@ -1229,7 +1229,7 @@ const translations: Record<Language, Translations> = {
       },
       contact: {
         phone: "+62 821-2378-2230",
-        email: "hello@koonang.io",
+        email: "koonang26@gmail.com",
         instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
         linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
       },
@@ -1633,7 +1633,7 @@ const translations: Record<Language, Translations> = {
       desc: "AI-powered Web Architecture Studio building digital systems for revenue, automation, and scalability.",
       contact: {
         phone: "+62 821-2378-2230",
-        email: "hello@koonang.io",
+        email: "koonang26@gmail.com",
         instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
         linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
       },
@@ -2015,7 +2015,7 @@ const translations: Record<Language, Translations> = {
       },
       contact: {
         phone: "+62 821-2378-2230",
-        email: "hello@koonang.io",
+        email: "koonang26@gmail.com",
         instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
         linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
       },
