@@ -847,7 +847,7 @@ const translations: Record<Language, Translations> = {
       desc: "AI-powered Web Architecture Studio yang merancang sistem digital untuk revenue, automation, dan scalability.",
       contact: {
         phone: "+62 821-2378-2230",
-        email: "koonang26@gmail.com",
+        email: "hello@koonang.id",
         instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
         linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
       },
