@@ -6,7 +6,7 @@ import { Mail, Phone, Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {
   const { t } = useLanguage();
-  const contactEmail = "koonang26@gmail.com";
+  const contactEmail = "hello@koonang.id";
 
   const platformLinks = [
     { name: t.footer.platform.links[0], path: "/arsitektur" },
