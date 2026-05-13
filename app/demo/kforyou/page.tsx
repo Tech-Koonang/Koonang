@@ -91,7 +91,7 @@ const platforms = [
     description: "Customer-facing e-commerce store with shopping and checkout experience",
     icon: ShoppingBag,
     demoUrl: "https://kforyou.koonang.site/",
-    imageUrl: "/k-foryou/Macbook-Air-k-foryou.koonang.site.webp"
+    imageUrl: "/k-foryou/Macbook-Air-k-foryou.koonang.site.webp?v=20260514"
   },
   {
     id: 2,
@@ -99,7 +99,7 @@ const platforms = [
     description: "Comprehensive admin panel for managing products, orders, and campaigns",
     icon: LayoutDashboard,
     demoUrl: "https://kforyou.koonang.site/admin",
-    imageUrl: "/k-foryou/Macbook-Air-k-foryou.koonang.site-admin.webp"
+    imageUrl: "/k-foryou/Macbook-Air-k-foryou.koonang.site-admin.webp?v=20260514"
   }
 ];
 
@@ -218,7 +218,7 @@ export default function KForYouPage() {
         >
           <div className="rounded-xl overflow-hidden bg-navy-800/50 mb-6">
             <img
-              src="/k-foryou/Macbook-Air-k-foryou.koonang.site.webp"
+              src="/k-foryou/Macbook-Air-k-foryou.koonang.site.webp?v=20260514"
               alt="K-For You E-Commerce Platform"
               className="w-full object-contain"
             />
