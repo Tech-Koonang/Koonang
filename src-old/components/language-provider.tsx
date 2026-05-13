@@ -1,3 +1,5 @@
+"use client";
+
 import React, { createContext, useContext, useState } from "react";
 
 type Language = "id" | "en";
@@ -8,6 +10,8 @@ type Translations = {
     approach: string;
     system: string;
     caseStudies: string;
+    pricing: string;
+    demo: string;
     contact: string;
     startAnalysis: string;
   };
@@ -87,6 +91,12 @@ type Translations = {
   };
   footer: {
     desc: string;
+    contact: {
+      phone: string;
+      email: string;
+      instagram: string;
+      linkedin: string;
+    };
     platform: {
       title: string;
       links: string[];
@@ -297,6 +307,12 @@ type Translations = {
       headline: string;
       subheadline: string;
       cta: string;
+    };
+    contact: {
+      phone: string;
+      email: string;
+      instagram: string;
+      linkedin: string;
     };
     consultation: {
       headline: string;
@@ -565,6 +581,8 @@ const translations: Record<Language, Translations> = {
       approach: "Pendekatan",
       system: "Sistem",
       caseStudies: "Studi Kasus",
+      pricing: "Harga",
+      demo: "Demo",
       contact: "Kontak",
       startAnalysis: "Mulai Analisis",
     },
@@ -827,9 +845,15 @@ const translations: Record<Language, Translations> = {
     },
     footer: {
       desc: "AI-powered Web Architecture Studio yang merancang sistem digital untuk revenue, automation, dan scalability.",
+      contact: {
+        phone: "+62 821-2378-2230",
+        email: "hello@koonang.io",
+        instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
+        linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
+      },
       platform: {
         title: "Platform",
-        links: ["Arsitektur", "Otomasi", "Investasi"],
+        links: ["Arsitektur", "Otomasi", "Investasi", "Demo"],
       },
       company: {
         title: "Perusahaan",
@@ -1203,6 +1227,12 @@ const translations: Record<Language, Translations> = {
         subheadline: "Setiap sistem digital yang kuat dimulai dari arsitektur yang tepat. Diskusikan kebutuhan bisnis Anda bersama tim arsitek digital berpengalaman.",
         cta: "Scroll untuk Memulai",
       },
+      contact: {
+        phone: "+62 821-2378-2230",
+        email: "hello@koonang.io",
+        instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
+        linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
+      },
       consultation: {
         headline: "Konsultasi Eksklusif dengan Digital System Architect",
         description: "Setiap sesi konsultasi ditangani langsung oleh tim dengan pengalaman lebih dari 10 tahun dalam:",
@@ -1480,6 +1510,8 @@ const translations: Record<Language, Translations> = {
       approach: "Approach",
       system: "System",
       caseStudies: "Case Studies",
+      pricing: "Pricing",
+      demo: "Demo",
       contact: "Contact",
       startAnalysis: "Start Analysis",
     },
@@ -1599,9 +1631,15 @@ const translations: Record<Language, Translations> = {
     },
     footer: {
       desc: "AI-powered Web Architecture Studio building digital systems for revenue, automation, and scalability.",
+      contact: {
+        phone: "+62 821-2378-2230",
+        email: "hello@koonang.io",
+        instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
+        linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
+      },
       platform: {
         title: "Platform",
-        links: ["Architecture", "Automation", "Investment"],
+        links: ["Architecture", "Automation", "Investment", "Demo"],
       },
       company: {
         title: "Company",
@@ -1974,6 +2012,12 @@ const translations: Record<Language, Translations> = {
         headline: "Start Your Strategic Conversation",
         subheadline: "Every strong digital system starts with the right architecture. Discuss your business needs with an experienced digital architect team.",
         cta: "Scroll to Start",
+      },
+      contact: {
+        phone: "+62 821-2378-2230",
+        email: "hello@koonang.io",
+        instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
+        linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
       },
       consultation: {
         headline: "Exclusive Consultation with Digital System Architect",
@@ -2410,14 +2454,20 @@ export function LanguageProvider({
   defaultLanguage = "id",
   storageKey = "koonang-language",
 }: LanguageProviderProps) {
-  const [language, setLanguage] = useState<Language>(
-    () => (localStorage.getItem(storageKey) as Language) || defaultLanguage
-  );
+  const [language, setLanguage] = useState<Language>(() => {
+    // Check if we're on the server side
+    if (typeof window === "undefined") {
+      return defaultLanguage;
+    }
+    return (localStorage.getItem(storageKey) as Language) || defaultLanguage;
+  });
 
   const value = {
     language,
     setLanguage: (lang: Language) => {
-      localStorage.setItem(storageKey, lang);
+      if (typeof window !== "undefined") {
+        localStorage.setItem(storageKey, lang);
+      }
       setLanguage(lang);
     },
     t: translations[language],
