@@ -22,12 +22,12 @@ export function Comparison() {
             </ul>
           </div>
 
-          {/* koonang.io */}
+          {/* Koonang */}
           <div className="p-8 rounded-2xl bg-navy-900 dark:bg-gradient-to-br dark:from-navy-800 dark:to-navy-900 border border-tosca/30 relative overflow-hidden shadow-[0_0_40px_rgba(0,231,254,0.1)]">
             <div className="absolute top-0 right-0 w-32 h-32 bg-tosca/10 blur-[50px] rounded-full" />
             
             <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-              koonang.io
+              Koonang
               <span className="px-2 py-0.5 rounded text-[10px] bg-tosca/20 text-tosca border border-tosca/20 uppercase tracking-wider">
                 AI-Powered
               </span>

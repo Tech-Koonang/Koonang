@@ -1,5 +1,3 @@
-"use client";
-
 import React, { createContext, useContext, useState } from "react";
 
 type Language = "id" | "en";
@@ -10,8 +8,6 @@ type Translations = {
     approach: string;
     system: string;
     caseStudies: string;
-    pricing: string;
-    demo: string;
     contact: string;
     startAnalysis: string;
   };
@@ -91,12 +87,6 @@ type Translations = {
   };
   footer: {
     desc: string;
-    contact: {
-      phone: string;
-      email: string;
-      instagram: string;
-      linkedin: string;
-    };
     platform: {
       title: string;
       links: string[];
@@ -307,12 +297,6 @@ type Translations = {
       headline: string;
       subheadline: string;
       cta: string;
-    };
-    contact: {
-      phone: string;
-      email: string;
-      instagram: string;
-      linkedin: string;
     };
     consultation: {
       headline: string;
@@ -581,8 +565,6 @@ const translations: Record<Language, Translations> = {
       approach: "Pendekatan",
       system: "Sistem",
       caseStudies: "Studi Kasus",
-      pricing: "Harga",
-      demo: "Demo",
       contact: "Kontak",
       startAnalysis: "Mulai Analisis",
     },
@@ -593,7 +575,7 @@ const translations: Record<Language, Translations> = {
         part2: "Bekerja untuk Bisnis Anda.",
       },
       subheadline: {
-        part1: "koonang.io adalah AI-powered Web Architecture Studio yang merancang sistem digital untuk",
+        part1: "Koonang adalah AI-powered Web Architecture Studio yang merancang sistem digital untuk",
         revenue: "revenue",
         automation: "automation",
         scalability: "scalability",
@@ -648,26 +630,26 @@ const translations: Record<Language, Translations> = {
         {
           title: "1. Penerimaan Syarat",
           content: [
-            "Dengan mengakses dan menggunakan situs web koonang.io, Anda menyetujui untuk terikat oleh Syarat Layanan ini dan semua hukum dan peraturan yang berlaku."
+            "Dengan mengakses dan menggunakan situs web Koonang, Anda menyetujui untuk terikat oleh Syarat Layanan ini dan semua hukum dan peraturan yang berlaku."
           ]
         },
         {
           title: "2. Layanan Arsitektur Digital",
           content: [
-            "koonang.io menyediakan layanan konsultasi, perancangan, dan pengembangan sistem digital. Setiap proyek didasarkan pada blueprint arsitektur yang disepakati bersama.",
+            "Koonang menyediakan layanan konsultasi, perancangan, dan pengembangan sistem digital. Setiap proyek didasarkan pada blueprint arsitektur yang disepakati bersama.",
             "Estimasi investasi, jadwal, dan ruang lingkup pekerjaan akan dirinci secara spesifik untuk setiap proyek sebelum pekerjaan dimulai."
           ]
         },
         {
           title: "3. Hak Kekayaan Intelektual",
           content: [
-            "Blueprint, konsep arsitektur, dan kode yang dikembangkan oleh koonang.io merupakan milik koonang.io sampai seluruh kewajiban pembayaran diselesaikan, kecuali disepakati lain secara tertulis."
+            "Blueprint, konsep arsitektur, dan kode yang dikembangkan oleh Koonang merupakan milik Koonang sampai seluruh kewajiban pembayaran diselesaikan, kecuali disepakati lain secara tertulis."
           ]
         },
         {
           title: "4. Batasan Tanggung Jawab",
           content: [
-            "koonang.io tidak bertanggung jawab atas kerugian langsung, tidak langsung, insidental, atau konsekuensial yang timbul dari penggunaan atau ketidakmampuan untuk menggunakan sistem atau layanan kami."
+            "Koonang tidak bertanggung jawab atas kerugian langsung, tidak langsung, insidental, atau konsekuensial yang timbul dari penggunaan atau ketidakmampuan untuk menggunakan sistem atau layanan kami."
           ]
         },
         {
@@ -685,8 +667,8 @@ const translations: Record<Language, Translations> = {
         cta: "Lihat Peran yang Dibuka",
       },
       principles: {
-        title: "Standar Kerja di koonang",
-        desc: "koonang adalah studio arsitektur digital yang berfokus pada kualitas sistem, bukan kuantitas proyek. Kami bekerja dengan pendekatan strategis, modular, dan berbasis analisis.",
+        title: "Standar Kerja di Koonang",
+        desc: "Koonang adalah studio arsitektur digital yang berfokus pada kualitas sistem, bukan kuantitas proyek. Kami bekerja dengan pendekatan strategis, modular, dan berbasis analisis.",
         items: [
           "Architecture First",
           "Clean & Scalable Code",
@@ -778,7 +760,7 @@ const translations: Record<Language, Translations> = {
     process: {
       title: {
         part1: "Tahapan Growth Bersama",
-        part2: "koonang",
+        part2: "Koonang",
       },
       desc: "Proses terstruktur yang mengubah ide menjadi eksekusi presisi.",
       steps: [
@@ -845,21 +827,15 @@ const translations: Record<Language, Translations> = {
     },
     footer: {
       desc: "AI-powered Web Architecture Studio yang merancang sistem digital untuk revenue, automation, dan scalability.",
-      contact: {
-        phone: "+62 821-2378-2230",
-        email: "hello@koonang.io",
-        instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
-        linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
-      },
       platform: {
         title: "Platform",
-        links: ["Arsitektur", "Otomasi", "Investasi", "Demo"],
+        links: ["Arsitektur", "Otomasi", "Investasi"],
       },
       company: {
         title: "Perusahaan",
         links: ["Tentang", "Karir", "Kontak"],
       },
-      rights: "© 2026 koonang.io. Hak cipta dilindungi undang-undang.",
+      rights: "© 2026 Koonang. Hak cipta dilindungi undang-undang.",
       privacy: "Kebijakan Privasi",
       terms: "Syarat Layanan",
     },
@@ -982,7 +958,7 @@ const translations: Record<Language, Translations> = {
         ],
       },
       framework: {
-        title: "Framework Proprietary koonang",
+        title: "Framework Proprietary Koonang",
         steps: [
           { title: "DISCOVER", desc: "Analisis mendalam tentang model bisnis dan pasar." },
           { title: "DIAGNOSE", desc: "Identifikasi hambatan dan peluang pertumbuhan." },
@@ -1101,7 +1077,7 @@ const translations: Record<Language, Translations> = {
     caseStudiesPage: {
       hero: {
         headline: "Studi Kasus: Simulasi Arsitektur Sistem di Berbagai Industri",
-        subheadline: "Bagaimana pendekatan koonang diterapkan untuk merancang sistem digital yang scalable, revenue-driven, dan terintegrasi.",
+        subheadline: "Bagaimana pendekatan Koonang diterapkan untuk merancang sistem digital yang scalable, revenue-driven, dan terintegrasi.",
         cta: "Lihat Simulasi Sistem",
       },
       simulations: [
@@ -1218,7 +1194,7 @@ const translations: Record<Language, Translations> = {
       ],
       insight: {
         headline: "Setiap Industri Berbeda. Struktur Sistemnya Tidak Sama.",
-        content: "Pendekatan koonang selalu dimulai dari analisis model bisnis, revenue logic, dan operational bottleneck. Bukan dari template."
+        content: "Pendekatan Koonang selalu dimulai dari analisis model bisnis, revenue logic, dan operational bottleneck. Bukan dari template."
       }
     },
     contactPage: {
@@ -1226,12 +1202,6 @@ const translations: Record<Language, Translations> = {
         headline: "Mulai Percakapan Strategis Anda",
         subheadline: "Setiap sistem digital yang kuat dimulai dari arsitektur yang tepat. Diskusikan kebutuhan bisnis Anda bersama tim arsitek digital berpengalaman.",
         cta: "Scroll untuk Memulai",
-      },
-      contact: {
-        phone: "+62 821-2378-2230",
-        email: "hello@koonang.io",
-        instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
-        linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
       },
       consultation: {
         headline: "Konsultasi Eksklusif dengan Digital System Architect",
@@ -1482,7 +1452,7 @@ const translations: Record<Language, Translations> = {
       },
       subscription: {
         headline: "Model Kerja yang Fleksibel",
-        narration: "koonang tidak menggunakan model SLA subscription wajib. Setiap sistem dibangun dengan struktur yang jelas dan dapat berdiri secara independen.",
+        narration: "Koonang tidak menggunakan model SLA subscription wajib. Setiap sistem dibangun dengan struktur yang jelas dan dapat berdiri secara independen.",
         options: ["Maintenance", "Optimization", "Additional automation", "System expansion"],
         closing: "Kami membangun sistem, bukan mengikat kontrak jangka panjang.",
       },
@@ -1510,8 +1480,6 @@ const translations: Record<Language, Translations> = {
       approach: "Approach",
       system: "System",
       caseStudies: "Case Studies",
-      pricing: "Pricing",
-      demo: "Demo",
       contact: "Contact",
       startAnalysis: "Start Analysis",
     },
@@ -1522,7 +1490,7 @@ const translations: Record<Language, Translations> = {
         part2: "Works for Your Business.",
       },
       subheadline: {
-        part1: "koonang.io is an AI-powered Web Architecture Studio designing digital systems for",
+        part1: "Koonang is an AI-powered Web Architecture Studio designing digital systems for",
         revenue: "revenue",
         automation: "automation",
         scalability: "scalability",
@@ -1564,7 +1532,7 @@ const translations: Record<Language, Translations> = {
     process: {
       title: {
         part1: "Growth Stages with",
-        part2: "koonang",
+        part2: "Koonang",
       },
       desc: "A structured process turning ideas into precise execution.",
       steps: [
@@ -1631,21 +1599,15 @@ const translations: Record<Language, Translations> = {
     },
     footer: {
       desc: "AI-powered Web Architecture Studio building digital systems for revenue, automation, and scalability.",
-      contact: {
-        phone: "+62 821-2378-2230",
-        email: "hello@koonang.io",
-        instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
-        linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
-      },
       platform: {
         title: "Platform",
-        links: ["Architecture", "Automation", "Investment", "Demo"],
+        links: ["Architecture", "Automation", "Investment"],
       },
       company: {
         title: "Company",
         links: ["About", "Careers", "Contact"],
       },
-      rights: "© 2026 koonang.io. All rights reserved.",
+      rights: "© 2026 Koonang. All rights reserved.",
       privacy: "Privacy Policy",
       terms: "Terms of Service",
     },
@@ -1768,7 +1730,7 @@ const translations: Record<Language, Translations> = {
         ],
       },
       framework: {
-        title: "koonang Proprietary Framework",
+        title: "Koonang Proprietary Framework",
         steps: [
           { title: "DISCOVER", desc: "In-depth analysis of business model and market." },
           { title: "DIAGNOSE", desc: "Identification of obstacles and growth opportunities." },
@@ -1887,7 +1849,7 @@ const translations: Record<Language, Translations> = {
     caseStudiesPage: {
       hero: {
         headline: "Case Studies: System Architecture Simulation Across Industries",
-        subheadline: "How the koonang approach is applied to design scalable, revenue-driven, and integrated digital systems.",
+        subheadline: "How the Koonang approach is applied to design scalable, revenue-driven, and integrated digital systems.",
         cta: "View System Simulations",
       },
       simulations: [
@@ -2004,7 +1966,7 @@ const translations: Record<Language, Translations> = {
       ],
       insight: {
         headline: "Every Industry is Different. System Structures are Not the Same.",
-        content: "The koonang approach always starts with an analysis of the business model, revenue logic, and operational bottlenecks. Not from a template."
+        content: "The Koonang approach always starts with an analysis of the business model, revenue logic, and operational bottlenecks. Not from a template."
       }
     },
     contactPage: {
@@ -2012,12 +1974,6 @@ const translations: Record<Language, Translations> = {
         headline: "Start Your Strategic Conversation",
         subheadline: "Every strong digital system starts with the right architecture. Discuss your business needs with an experienced digital architect team.",
         cta: "Scroll to Start",
-      },
-      contact: {
-        phone: "+62 821-2378-2230",
-        email: "hello@koonang.io",
-        instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
-        linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
       },
       consultation: {
         headline: "Exclusive Consultation with Digital System Architect",
@@ -2268,7 +2224,7 @@ const translations: Record<Language, Translations> = {
       },
       subscription: {
         headline: "Flexible Working Model",
-        narration: "koonang does not use a mandatory subscription SLA model. Every system is built with a clear structure and can stand independently.",
+        narration: "Koonang does not use a mandatory subscription SLA model. Every system is built with a clear structure and can stand independently.",
         options: ["Maintenance", "Optimization", "Additional automation", "System expansion"],
         closing: "We build systems, not tie long-term contracts.",
       },
@@ -2334,26 +2290,26 @@ const translations: Record<Language, Translations> = {
         {
           title: "1. Acceptance of Terms",
           content: [
-            "By accessing and using the koonang.io website, you agree to be bound by these Terms of Service and all applicable laws and regulations."
+            "By accessing and using the Koonang website, you agree to be bound by these Terms of Service and all applicable laws and regulations."
           ]
         },
         {
           title: "2. Digital Architecture Services",
           content: [
-            "koonang.io provides digital system consulting, design, and development services. Every project is based on a mutually agreed architecture blueprint.",
+            "Koonang provides digital system consulting, design, and development services. Every project is based on a mutually agreed architecture blueprint.",
             "Investment estimates, timelines, and scope of work will be detailed specifically for each project before work begins."
           ]
         },
         {
           title: "3. Intellectual Property Rights",
           content: [
-            "Blueprints, architectural concepts, and code developed by koonang.io remain the property of koonang.io until all payment obligations are settled, unless otherwise agreed in writing."
+            "Blueprints, architectural concepts, and code developed by Koonang remain the property of Koonang until all payment obligations are settled, unless otherwise agreed in writing."
           ]
         },
         {
           title: "4. Limitation of Liability",
           content: [
-            "koonang.io shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use our systems or services."
+            "Koonang shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use our systems or services."
           ]
         },
         {
@@ -2371,8 +2327,8 @@ const translations: Record<Language, Translations> = {
         cta: "View Open Roles",
       },
       principles: {
-        title: "Working Standards at koonang",
-        desc: "koonang is a digital architecture studio that focuses on system quality, not project quantity. We work with a strategic, modular, and analysis-driven approach.",
+        title: "Working Standards at Koonang",
+        desc: "Koonang is a digital architecture studio that focuses on system quality, not project quantity. We work with a strategic, modular, and analysis-driven approach.",
         items: [
           "Architecture First",
           "Clean & Scalable Code",
@@ -2454,20 +2410,14 @@ export function LanguageProvider({
   defaultLanguage = "id",
   storageKey = "koonang-language",
 }: LanguageProviderProps) {
-  const [language, setLanguage] = useState<Language>(() => {
-    // Check if we're on the server side
-    if (typeof window === "undefined") {
-      return defaultLanguage;
-    }
-    return (localStorage.getItem(storageKey) as Language) || defaultLanguage;
-  });
+  const [language, setLanguage] = useState<Language>(
+    () => (localStorage.getItem(storageKey) as Language) || defaultLanguage
+  );
 
   const value = {
     language,
     setLanguage: (lang: Language) => {
-      if (typeof window !== "undefined") {
-        localStorage.setItem(storageKey, lang);
-      }
+      localStorage.setItem(storageKey, lang);
       setLanguage(lang);
     },
     t: translations[language],

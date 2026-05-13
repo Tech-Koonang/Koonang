@@ -43,7 +43,7 @@ export function Navbar({ onOpenWizard }: { onOpenWizard?: () => void }) {
         <Link to="/" className="flex items-center gap-2 group">
           <img src="/koonang-icon.png" alt="Koonang Logo" className="w-6 h-6 md:w-8 md:h-8 opacity-80 group-hover:opacity-100 transition-opacity" />
           <span className="text-lg md:text-xl font-medium tracking-tight text-navy-900 dark:text-white text-glow">
-            koonang.io
+            Koonang
           </span>
         </Link>
 
