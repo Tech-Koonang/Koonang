@@ -9,6 +9,10 @@ import { Check, X, ChevronDown } from "lucide-react";
 export default function PricingPage() {
   const { t, language } = useLanguage();
   const [isAnnual, setIsAnnual] = useState(false);
+  const inquiryEmail = "hello@koonang.id";
+  const inquiryHref = `mailto:${inquiryEmail}?subject=${encodeURIComponent("Request Demo Koonang")}&body=${encodeURIComponent(
+    "Halo tim Koonang,\n\nSaya ingin request demo dan berdiskusi tentang kebutuhan sistem digital bisnis saya.\n\nNama:\nPerusahaan:\nNomor WhatsApp:\nKebutuhan singkat:\n\nTerima kasih."
+  )}`;
 
   const prices = {
     foundation: { setup: 25000, monthly: 2500, annual: 2125 },
@@ -396,7 +400,7 @@ export default function PricingPage() {
                     scale: 1.02,
                     transition: { duration: 0.3 }
                   }}
-                  className={`p-6 rounded-xl border transition-all cursor-pointer ${
+                  className={`p-6 rounded-xl border transition-all cursor-pointer flex flex-col h-full ${
                     sub.color === 'gold' 
                       ? 'border-yellow-500/30 bg-gradient-to-br from-navy-800/30 to-yellow-900/10 hover:border-yellow-500/50'
                       : 'border-slate-700 bg-navy-800/20 hover:border-teal-500/30'
@@ -427,7 +431,7 @@ export default function PricingPage() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.6, delay: 4.5 + index * 0.15 }}
-                    className="text-sm text-slate-400 mb-4 leading-relaxed"
+                    className="text-sm text-slate-400 mb-4 leading-relaxed min-h-[4.5rem]"
                   >
                     {sub.description}
                   </motion.p>
@@ -436,7 +440,7 @@ export default function PricingPage() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 4.7 + index * 0.15 }}
-                    className={`flex items-center gap-2 text-sm font-medium ${
+                    className={`mt-auto flex items-center gap-2 text-sm font-medium ${
                       sub.color === 'gold' ? 'text-yellow-400' : 'text-teal-400'
                     }`}
                   >
@@ -489,20 +493,14 @@ export default function PricingPage() {
               transition={{ duration: 0.6, delay: 5.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
             >
-              <motion.button 
+              <motion.a 
+                href={inquiryHref}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-teal-500 to-green-500 text-navy-900 font-semibold rounded-xl hover:shadow-lg hover:shadow-teal-500/25 transition-all"
+                className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-teal-500 to-green-500 text-navy-900 font-semibold rounded-xl hover:shadow-lg hover:shadow-teal-500/25 transition-all"
               >
-                {language === "id" ? "Konsultasi Gratis" : "Free Consultation"} ↗
-              </motion.button>
-              <motion.button 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 border border-white/20 text-white font-medium rounded-xl hover:bg-white/10 transition-all"
-              >
-                {language === "id" ? "Bandingkan Paket" : "Compare Plans"}
-              </motion.button>
+                Request Demo ↗
+              </motion.a>
             </motion.div>
             
             <motion.div 

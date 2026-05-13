@@ -20,18 +20,11 @@ const demoCompanies = [
     image: "/demo/balekaresort/Macbook-Air-baleka-resort.vercel.app.webp"
   },
   {
-    id: "b3playground",
-    name: "B3 Playground",
-    description: "Lifestyle fitness facility with holistic 360° approach to health and wellness in Kerobokan, Bali",
-    category: "Fitness",
-    image: "/demo/b3playground/Macbook-Air-b3playground.koonang.site.webp"
-  },
-  {
     id: "kforyou",
     name: "K-For You",
     description: "Next.js 14 E-Commerce application with complete frontend store and admin dashboard",
     category: "E-Commerce",
-    image: "/k-foryou/Macbook-Air-k-foryou.koonang.site.webp"
+    image: "/k-foryou/home.png"
   }
 ];
 
