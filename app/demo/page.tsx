@@ -24,7 +24,7 @@ const demoCompanies = [
     name: "K-For You",
     description: "Next.js 14 E-Commerce application with complete frontend store and admin dashboard",
     category: "E-Commerce",
-    image: "/k-foryou/home.png"
+    image: "/k-foryou/Macbook-Air-k-foryou.koonang.site.webp"
   }
 ];
 
