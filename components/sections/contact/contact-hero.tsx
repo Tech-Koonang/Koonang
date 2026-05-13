@@ -93,7 +93,7 @@ export function ContactHero() {
               <Instagram size={20} className="text-pink-500 group-hover:text-white" />
             </div>
             <h3 className="text-sm font-bold text-navy-900 dark:text-white mb-1 uppercase tracking-wider">Instagram</h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm font-medium">@koonang.digital</p>
+            <p className="text-slate-600 dark:text-slate-400 text-sm font-medium">@Koonang.digital</p>
           </a>
 
           <a 
@@ -106,7 +106,7 @@ export function ContactHero() {
               <Linkedin size={20} className="text-blue-600 group-hover:text-white" />
             </div>
             <h3 className="text-sm font-bold text-navy-900 dark:text-white mb-1 uppercase tracking-wider">LinkedIn</h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm font-medium">koonang-digital</p>
+            <p className="text-slate-600 dark:text-slate-400 text-sm font-medium">Koonang-digital</p>
           </a>
         </motion.div>
 

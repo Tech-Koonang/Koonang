@@ -685,8 +685,8 @@ const translations: Record<Language, Translations> = {
         cta: "Lihat Peran yang Dibuka",
       },
       principles: {
-        title: "Standar Kerja di koonang",
-        desc: "koonang adalah studio arsitektur digital yang berfokus pada kualitas sistem, bukan kuantitas proyek. Kami bekerja dengan pendekatan strategis, modular, dan berbasis analisis.",
+        title: "Standar Kerja di Koonang",
+        desc: "Koonang adalah studio arsitektur digital yang berfokus pada kualitas sistem, bukan kuantitas proyek. Kami bekerja dengan pendekatan strategis, modular, dan berbasis analisis.",
         items: [
           "Architecture First",
           "Clean & Scalable Code",
@@ -778,7 +778,7 @@ const translations: Record<Language, Translations> = {
     process: {
       title: {
         part1: "Tahapan Growth Bersama",
-        part2: "koonang",
+        part2: "Koonang",
       },
       desc: "Proses terstruktur yang mengubah ide menjadi eksekusi presisi.",
       steps: [
@@ -982,7 +982,7 @@ const translations: Record<Language, Translations> = {
         ],
       },
       framework: {
-        title: "Framework Proprietary koonang",
+        title: "Framework Proprietary Koonang",
         steps: [
           { title: "DISCOVER", desc: "Analisis mendalam tentang model bisnis dan pasar." },
           { title: "DIAGNOSE", desc: "Identifikasi hambatan dan peluang pertumbuhan." },
@@ -1101,7 +1101,7 @@ const translations: Record<Language, Translations> = {
     caseStudiesPage: {
       hero: {
         headline: "Studi Kasus: Simulasi Arsitektur Sistem di Berbagai Industri",
-        subheadline: "Bagaimana pendekatan koonang diterapkan untuk merancang sistem digital yang scalable, revenue-driven, dan terintegrasi.",
+        subheadline: "Bagaimana pendekatan Koonang diterapkan untuk merancang sistem digital yang scalable, revenue-driven, dan terintegrasi.",
         cta: "Lihat Simulasi Sistem",
       },
       simulations: [
@@ -1218,7 +1218,7 @@ const translations: Record<Language, Translations> = {
       ],
       insight: {
         headline: "Setiap Industri Berbeda. Struktur Sistemnya Tidak Sama.",
-        content: "Pendekatan koonang selalu dimulai dari analisis model bisnis, revenue logic, dan operational bottleneck. Bukan dari template."
+        content: "Pendekatan Koonang selalu dimulai dari analisis model bisnis, revenue logic, dan operational bottleneck. Bukan dari template."
       }
     },
     contactPage: {
@@ -1482,7 +1482,7 @@ const translations: Record<Language, Translations> = {
       },
       subscription: {
         headline: "Model Kerja yang Fleksibel",
-        narration: "koonang tidak menggunakan model SLA subscription wajib. Setiap sistem dibangun dengan struktur yang jelas dan dapat berdiri secara independen.",
+        narration: "Koonang tidak menggunakan model SLA subscription wajib. Setiap sistem dibangun dengan struktur yang jelas dan dapat berdiri secara independen.",
         options: ["Maintenance", "Optimization", "Additional automation", "System expansion"],
         closing: "Kami membangun sistem, bukan mengikat kontrak jangka panjang.",
       },
@@ -1564,7 +1564,7 @@ const translations: Record<Language, Translations> = {
     process: {
       title: {
         part1: "Growth Stages with",
-        part2: "koonang",
+        part2: "Koonang",
       },
       desc: "A structured process turning ideas into precise execution.",
       steps: [
@@ -1768,7 +1768,7 @@ const translations: Record<Language, Translations> = {
         ],
       },
       framework: {
-        title: "koonang Proprietary Framework",
+        title: "Koonang Proprietary Framework",
         steps: [
           { title: "DISCOVER", desc: "In-depth analysis of business model and market." },
           { title: "DIAGNOSE", desc: "Identification of obstacles and growth opportunities." },
@@ -1887,7 +1887,7 @@ const translations: Record<Language, Translations> = {
     caseStudiesPage: {
       hero: {
         headline: "Case Studies: System Architecture Simulation Across Industries",
-        subheadline: "How the koonang approach is applied to design scalable, revenue-driven, and integrated digital systems.",
+        subheadline: "How the Koonang approach is applied to design scalable, revenue-driven, and integrated digital systems.",
         cta: "View System Simulations",
       },
       simulations: [
@@ -2004,7 +2004,7 @@ const translations: Record<Language, Translations> = {
       ],
       insight: {
         headline: "Every Industry is Different. System Structures are Not the Same.",
-        content: "The koonang approach always starts with an analysis of the business model, revenue logic, and operational bottlenecks. Not from a template."
+        content: "The Koonang approach always starts with an analysis of the business model, revenue logic, and operational bottlenecks. Not from a template."
       }
     },
     contactPage: {
@@ -2268,7 +2268,7 @@ const translations: Record<Language, Translations> = {
       },
       subscription: {
         headline: "Flexible Working Model",
-        narration: "koonang does not use a mandatory subscription SLA model. Every system is built with a clear structure and can stand independently.",
+        narration: "Koonang does not use a mandatory subscription SLA model. Every system is built with a clear structure and can stand independently.",
         options: ["Maintenance", "Optimization", "Additional automation", "System expansion"],
         closing: "We build systems, not tie long-term contracts.",
       },
@@ -2371,8 +2371,8 @@ const translations: Record<Language, Translations> = {
         cta: "View Open Roles",
       },
       principles: {
-        title: "Working Standards at koonang",
-        desc: "koonang is a digital architecture studio that focuses on system quality, not project quantity. We work with a strategic, modular, and analysis-driven approach.",
+        title: "Working Standards at Koonang",
+        desc: "Koonang is a digital architecture studio that focuses on system quality, not project quantity. We work with a strategic, modular, and analysis-driven approach.",
         items: [
           "Architecture First",
           "Clean & Scalable Code",
