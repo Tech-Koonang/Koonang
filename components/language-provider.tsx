@@ -1229,7 +1229,7 @@ const translations: Record<Language, Translations> = {
       },
       contact: {
         phone: "+62 821-2378-2230",
-        email: "koonang26@gmail.com",
+        email: "hello@koonang.id",
         instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
         linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
       },
@@ -1633,7 +1633,7 @@ const translations: Record<Language, Translations> = {
       desc: "AI-powered Web Architecture Studio building digital systems for revenue, automation, and scalability.",
       contact: {
         phone: "+62 821-2378-2230",
-        email: "koonang26@gmail.com",
+        email: "hello@koonang.id",
         instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
         linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
       },
@@ -2015,7 +2015,7 @@ const translations: Record<Language, Translations> = {
       },
       contact: {
         phone: "+62 821-2378-2230",
-        email: "koonang26@gmail.com",
+        email: "hello@koonang.id",
         instagram: "https://www.instagram.com/koonang.digital?igsh=eWoxajZlMm53NWpk&utm_source=web",
         linkedin: "https://www.linkedin.com/company/koonang-digital-integration-hub/",
       },
