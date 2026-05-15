@@ -10,8 +10,8 @@ import { ClientOnly } from "@/components/providers/client-only-provider";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Koonang - AI-powered Web Architecture Studio",
-  description: "AI-powered Web Architecture Studio landing page with deep space aesthetic and interactive wizard.",
+  title: "Koonang - Digital Integration Hub",
+  description: "Digital Integration Hub untuk integrasi sistem bisnis, otomatisasi workflow, manajemen data terpusat, dan transformasi digital perusahaan.",
   icons: {
     icon: "/koonang-icon.png",
     shortcut: "/koonang-icon.png",
